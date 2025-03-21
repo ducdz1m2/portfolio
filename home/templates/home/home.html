@@ -1,0 +1,141 @@
+{% extends "base.html" %} 
+{% load static %}
+{% block title %}Trang chủ | My Portfolio {% endblock %} 
+{% block content %}
+<section class="text-center">
+  <h1 class="text-4xl font-bold text-indigo-600 mb-4">
+    Chào mừng đến với Portfolio của tôi!
+  </h1>
+  <p class="text-lg text-gray-700 mb-6">
+    Tôi là Lê Ngọc Đức, một lập trình viên yêu thích AI, công nghệ và xây dựng công cụ hữu
+    ích.
+  </p>
+  <!-- 👨‍💻 Về tôi -->
+  <div class="mt-12 md:flex items-center bg-white p-6 rounded-2xl shadow">
+    <!-- Ảnh bên trái -->
+    <div class="md:w-1/3 mb-4 md:mb-0 md:mr-6">
+      <img
+        src="{% static 'images/myface.png' %}"
+        alt="Ảnh của tôi"
+        class="w-full rounded-2xl object-cover shadow-md"
+      />
+    </div>
+    <!-- Thông tin bên phải -->
+    <div class="md:w-2/3">
+      <h2 class="text-2xl font-bold text-indigo-700 mb-2">👨‍💻 Về tôi</h2>
+      <p class="text-gray-700 mb-2">
+        Xin chào! Tôi là một lập trình viên đam mê <strong>Python</strong>, <strong>AI</strong>, <strong>NLP</strong> và cả những dự án <strong>IoT với ESP8266 (C)</strong>.
+      </p>
+      <p class="text-gray-700 mb-2">
+        Tôi hiện đang theo học ngành <strong>Công nghệ Thông tin</strong> tại <strong>Đại học Cần Thơ (CTU)</strong> — quê hương của tôi cũng chính là <strong>Cần Thơ</strong>, vùng đất miền Tây thân thiện và yên bình.
+      </p>
+      <p class="text-gray-700">
+        Mục tiêu của tôi là chia sẻ kiến thức, xây dựng các công cụ nhỏ gọn nhưng hữu ích, giúp mọi người học tập và làm việc hiệu quả hơn.
+      </p>  
+    </div>
+  </div>
+
+  <!-- 📂 Dự án GitHub -->
+  <div class="mt-10 text-left">
+    <h2 class="text-2xl font-bold text-indigo-700 mb-4">📂 Dự án GitHub</h2>
+    <div class="grid md:grid-cols-2 gap-6">
+      <!-- Project Card 1 -->
+      <div class="bg-white p-6 rounded-2xl shadow">
+        <h3 class="text-xl font-semibold mb-2">🛎️ Quản lý Khách Sạn (QLKS)</h3>
+        <p class="text-gray-600 mb-2">
+          Ứng dụng quản lý khách sạn sử dụng Django và MySQL.
+        </p>
+        <a
+          href="https://github.com/ducdz1m2/QLKS"
+          target="_blank"
+          class="text-indigo-600 hover:underline"
+          >Xem trên GitHub</a
+        >
+        <div class="mt-2">
+          <iframe
+            src="https://ghbtns.com/github-btn.html?user=ducdz1m2&repo=QLKS&type=star&count=true&size=large"
+            frameborder="0"
+            scrolling="0"
+            width="170"
+            height="30"
+            title="GitHub Star"
+          ></iframe>
+          <iframe
+            src="https://ghbtns.com/github-btn.html?user=ducdz1m2&repo=QLKS&type=fork&count=true&size=large"
+            frameborder="0"
+            scrolling="0"
+            width="170"
+            height="30"
+            title="GitHub Fork"
+          ></iframe>
+        </div>
+      </div>
+
+      <!-- Project Card 2 -->
+      <div class="bg-white p-6 rounded-2xl shadow">
+        <h3 class="text-xl font-semibold mb-2">🧠 Generative AI</h3>
+        <p class="text-gray-600 mb-2">Sinh ảnh với Stable Diffusion</p>
+        <a
+          href="https://github.com/ducdz1m2/generative-ai"
+          target="_blank"
+          class="text-indigo-600 hover:underline"
+          >Xem trên GitHub</a
+        >
+        <div class="mt-2">
+          <iframe
+            src="https://ghbtns.com/github-btn.html?user=ducdz1m2&repo=generative-ai&type=star&count=true&size=large"
+            frameborder="0"
+            scrolling="0"
+            width="170"
+            height="30"
+            title="GitHub Star"
+          ></iframe>
+          <iframe
+            src="https://ghbtns.com/github-btn.html?user=ducdz1m2&repo=generative-ai&type=fork&count=true&size=large"
+            frameborder="0"
+            scrolling="0"
+            width="170"
+            height="30"
+            title="GitHub Fork"
+          ></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Các mục khác như AI, tool, blog vẫn giữ nguyên -->
+  <div class="grid md:grid-cols-3 gap-6 mt-12">
+    <div class="bg-white p-6 rounded-2xl shadow">
+      <h2 class="text-xl font-semibold mb-2">🎯 Demo AI</h2>
+      <p class="text-gray-600">Xem các tính năng AI mà tôi đã triển khai.</p>
+      <a
+        href="{% url 'ai' %}"
+        class="inline-block mt-3 text-indigo-600 hover:underline"
+        >Khám phá</a
+      >
+    </div>
+
+    <div class="bg-white p-6 rounded-2xl shadow">
+      <h2 class="text-xl font-semibold mb-2">🧰 Công cụ nhỏ</h2>
+      <p class="text-gray-600">Một số tool tiện ích tôi đã viết bằng Python.</p>
+      <a
+        href="{% url 'tools' %}"
+        class="inline-block mt-3 text-indigo-600 hover:underline"
+        >Xem tool</a
+      >
+    </div>
+
+    <div class="bg-white p-6 rounded-2xl shadow">
+      <h2 class="text-xl font-semibold mb-2">📝 Blog & Kinh nghiệm</h2>
+      <p class="text-gray-600">
+        Chia sẻ góc nhìn, mẹo vặt và hướng dẫn lập trình.
+      </p>
+      <a
+        href="{% url 'blog' %}"
+        class="inline-block mt-3 text-indigo-600 hover:underline"
+        >Đọc blog</a
+      >
+    </div>
+  </div>
+</section>
+{% endblock %}

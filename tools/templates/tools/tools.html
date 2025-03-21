@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block title %}Công cụ hữu ích{% endblock %}
+
+{% block content %}
+<h1 class="text-3xl font-bold mb-6 text-indigo-600">🧰 Công cụ nhỏ gọn, hữu ích</h1>
+
+<p class="text-gray-700 mb-6">Danh sách các công cụ hỗ trợ học tập, làm việc hiệu quả hơn. Click vào để trải nghiệm ngay:</p>
+
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+    <!-- Tool Card 1 -->
+    <div class="bg-white rounded-2xl shadow-md p-5 hover:shadow-lg transition">
+        <h2 class="text-xl font-semibold mb-2">🔤 Word Counter</h2>
+        <p class="text-gray-600 mb-4">Công cụ đếm từ</p>
+        <a href="{% url 'word_counter' %}" class="inline-block text-indigo-600 hover:underline">Dùng thử →</a>
+    </div>
+
+   
+
+    <!-- Bạn có thể thêm nhiều tool khác tại đây -->
+</div>
+{% endblock %}

@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block title %}Word Counter | Công cụ đếm từ{% endblock %}
+
+{% block content %}
+<div class="max-w-3xl mx-auto bg-white p-6 rounded-2xl shadow-lg">
+    <h1 class="text-2xl font-bold mb-4 text-indigo-600">🔤 Word Counter</h1>
+    <p class="mb-4 text-gray-600">Nhập đoạn văn để đếm số từ, ký tự và câu.</p>
+
+    <form method="POST" class="space-y-4">
+        {% csrf_token %}
+        <textarea name="text" rows="6" class="w-full p-3 border rounded" placeholder="Nhập văn bản...">{{ result.input_text }}</textarea>
+        <button type="submit" class="bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded-xl">Đếm ngay</button>
+    </form>
+
+    {% if result %}
+    <div class="mt-6 bg-gray-100 p-4 rounded-xl">
+        <p><strong>Số từ:</strong> {{ result.word_count }}</p>
+        <p><strong>Số ký tự:</strong> {{ result.char_count }}</p>
+        <p><strong>Số câu:</strong> {{ result.sentence_count }}</p>
+    </div>
+    {% endif %}
+</div>
+{% endblock %}

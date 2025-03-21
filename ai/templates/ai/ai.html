@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}AI Tools - MyPortfolio{% endblock %}
+
+{% block content %}
+<section class="text-center mb-10">
+    <h1 class="text-3xl font-bold mb-4 text-indigo-700">🧠 Công cụ AI</h1>
+    <p class="text-gray-600 max-w-xl mx-auto">
+        Trải nghiệm các công cụ AI nhỏ gọn, hỗ trợ học tập và làm việc hiệu quả.
+    </p>
+</section>
+
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+    <!-- Tool 1 -->
+    <div class="bg-white p-6 rounded-2xl shadow-md text-center">
+        <img src="{% static 'images/chatbot.webp' %}" alt="Chatbot" class="w-16 h-16 mx-auto mb-4">
+        <h3 class="text-xl font-semibold mb-2">Chatbot AI</h3>
+        <p class="text-gray-600 mb-3">Trò chuyện với AI hỗ trợ giải đáp và học tập.</p>
+        <a href="https://colab.research.google.com/..." target="_blank"
+           class="bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-700">
+            Dùng thử ngay
+        </a>
+    </div>
+
+    <!-- Tool 2 -->
+    <div class="bg-white p-6 rounded-2xl shadow-md text-center">
+        <img src="{% static 'images/textgen.webp' %}" alt="Text Generator" class="w-16 h-16 mx-auto mb-4">
+        <h3 class="text-xl font-semibold mb-2">Sinh văn bản</h3>
+        <p class="text-gray-600 mb-3">Sinh câu, đoạn văn thông minh từ nội dung input.</p>
+        <a href="https://colab.research.google.com/..." target="_blank"
+           class="bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700">
+            Dùng thử ngay
+        </a>
+    </div>
+
+    <!-- Tool 3 -->
+    <div class="bg-white p-6 rounded-2xl shadow-md text-center">
+        <img src="{% static 'images/summary.webp' %}" alt="Summarizer" class="w-16 h-16 mx-auto mb-4">
+        <h3 class="text-xl font-semibold mb-2">Tóm tắt văn bản</h3>
+        <p class="text-gray-600 mb-3">Tự động rút gọn văn bản dài thành đoạn ngắn.</p>
+        <a href="https://colab.research.google.com/..." target="_blank"
+           class="bg-purple-600 text-white px-4 py-2 rounded-lg hover:bg-purple-700">
+            Dùng thử ngay
+        </a>
+    </div>
+</div>
+{% endblock %}
